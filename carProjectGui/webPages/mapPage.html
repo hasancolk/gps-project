@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.cssscript.com/demo/animated-customizable-range-slider-pure-javascript-rslider-js/css/rSlider.min.css">
+    <title>Map Page</title>
+    <style>
+        #map{
+            height:500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/webPages/mainPage.html">Main Page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://127.0.0.1:5500/webPages/mapPage.html">Map</a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" id="logoutBtn">
+                        <a class="nav-link"  href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+    </div>
+    <div id="map"></div>
+    
+    <form>
+        <div class="container">
+            
+            <br>
+            <div class="row">
+                <div class="col-md-6 py-2">
+                    <select class="custom-select" id="selectedCar">
+                        <option selected>Araç Seçiniz</option>
+                    </select>
+                </div>
+                <!-- <div class="col-md-6 py-2">
+                    <select class="custom-select">
+                        <option selected>Seçim Yapınız</option>
+                        
+                    </select>
+                </div> -->
+                <div class="col-md-6">
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline" id="searchForm">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="selectCar(event)" >Onayla</button>
+                                </div>
+                            </div>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    <div class="container pt-5">
+        <input type="text" id="time_range" class="slider" />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://www.cssscript.com/demo/animated-customizable-range-slider-pure-javascript-rslider-js/js/rSlider.min.js"></script>
+    
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/mainPage.js"></script>
+    <script src="../javascript/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo_bBP9DQcP0aD7vfIsB_ZGGug1qlOlnE&callback=initMap"></script>
+</body>
+</html>
